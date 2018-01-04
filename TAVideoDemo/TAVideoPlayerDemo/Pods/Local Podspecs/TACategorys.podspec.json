@@ -1,0 +1,23 @@
+{
+  "name": "TACategorys",
+  "version": "1.0.1",
+  "summary": "TACategorys",
+  "homepage": "https://github.com/tasama/TACategorys",
+  "license": "MIT",
+  "authors": {
+    "tasama": "1442284151@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/tasama/TACategorys.git",
+    "tag": "1.0.1"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "TACategorys/*",
+  "frameworks": [
+    "Foundation",
+    "UIKit"
+  ]
+}

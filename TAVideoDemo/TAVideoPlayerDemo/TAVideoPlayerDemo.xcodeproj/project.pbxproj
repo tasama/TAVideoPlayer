@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9BE5F51E1FFE05B800AAE57C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE5F51D1FFE05B800AAE57C /* main.m */; };
+		9BE5F5211FFE05B800AAE57C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE5F5201FFE05B800AAE57C /* AppDelegate.m */; };
+		9BE5F5241FFE05B800AAE57C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE5F5231FFE05B800AAE57C /* ViewController.m */; };
+		9BE5F5271FFE05B800AAE57C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BE5F5251FFE05B800AAE57C /* Main.storyboard */; };
+		9BE5F5291FFE05B800AAE57C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BE5F5281FFE05B800AAE57C /* Assets.xcassets */; };
+		9BE5F52C1FFE05B800AAE57C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BE5F52A1FFE05B800AAE57C /* LaunchScreen.storyboard */; };
+		9BE5F55B1FFE07F200AAE57C /* VideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE5F55A1FFE07F200AAE57C /* VideoPlayerViewController.m */; };
+		9BE5F55E1FFE081F00AAE57C /* TAAVPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE5F55D1FFE081F00AAE57C /* TAAVPlayer.m */; };
+		9BE5F5641FFE124C00AAE57C /* TAPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE5F5631FFE124C00AAE57C /* TAPlayerView.m */; };
+		9BE5F5661FFE1FD600AAE57C /* PlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BE5F5651FFE1FD600AAE57C /* PlayerView.xib */; };
+		9BE5F5691FFE202900AAE57C /* PlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE5F5681FFE202900AAE57C /* PlayerView.m */; };
+		E519AA6AB6C06E9277AAFC63 /* libPods-TAVideoPlayerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C7E44F9F0D9A7DF011F0A51 /* libPods-TAVideoPlayerDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1BC91E83570A868147302E80 /* Pods-TAVideoPlayerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TAVideoPlayerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TAVideoPlayerDemo/Pods-TAVideoPlayerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		6C7E44F9F0D9A7DF011F0A51 /* libPods-TAVideoPlayerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TAVideoPlayerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BE5F5191FFE05B800AAE57C /* TAVideoPlayerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TAVideoPlayerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BE5F51D1FFE05B800AAE57C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9BE5F51F1FFE05B800AAE57C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9BE5F5201FFE05B800AAE57C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9BE5F5221FFE05B800AAE57C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9BE5F5231FFE05B800AAE57C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9BE5F5261FFE05B800AAE57C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9BE5F5281FFE05B800AAE57C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9BE5F52B1FFE05B800AAE57C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9BE5F52D1FFE05B800AAE57C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BE5F5591FFE07F200AAE57C /* VideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerViewController.h; sourceTree = "<group>"; };
+		9BE5F55A1FFE07F200AAE57C /* VideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerViewController.m; sourceTree = "<group>"; };
+		9BE5F55C1FFE081F00AAE57C /* TAAVPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAVPlayer.h; sourceTree = "<group>"; };
+		9BE5F55D1FFE081F00AAE57C /* TAAVPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAVPlayer.m; sourceTree = "<group>"; };
+		9BE5F55F1FFE102100AAE57C /* TAPlayerTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPlayerTransport.h; sourceTree = "<group>"; };
+		9BE5F5621FFE124C00AAE57C /* TAPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPlayerView.h; sourceTree = "<group>"; };
+		9BE5F5631FFE124C00AAE57C /* TAPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPlayerView.m; sourceTree = "<group>"; };
+		9BE5F5651FFE1FD600AAE57C /* PlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerView.xib; sourceTree = "<group>"; };
+		9BE5F5671FFE202900AAE57C /* PlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerView.h; sourceTree = "<group>"; };
+		9BE5F5681FFE202900AAE57C /* PlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerView.m; sourceTree = "<group>"; };
+		AD1C542512D7FB9505B1E070 /* Pods-TAVideoPlayerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TAVideoPlayerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TAVideoPlayerDemo/Pods-TAVideoPlayerDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9BE5F5161FFE05B800AAE57C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E519AA6AB6C06E9277AAFC63 /* libPods-TAVideoPlayerDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		67EC07090619F2E9EC5C5BA4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1BC91E83570A868147302E80 /* Pods-TAVideoPlayerDemo.debug.xcconfig */,
+				AD1C542512D7FB9505B1E070 /* Pods-TAVideoPlayerDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9BE5F5101FFE05B800AAE57C = {
+			isa = PBXGroup;
+			children = (
+				9BE5F51B1FFE05B800AAE57C /* TAVideoPlayerDemo */,
+				9BE5F51A1FFE05B800AAE57C /* Products */,
+				67EC07090619F2E9EC5C5BA4 /* Pods */,
+				E62630FD53FD3CA2E5D69324 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9BE5F51A1FFE05B800AAE57C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9BE5F5191FFE05B800AAE57C /* TAVideoPlayerDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9BE5F51B1FFE05B800AAE57C /* TAVideoPlayerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				9BE5F51F1FFE05B800AAE57C /* AppDelegate.h */,
+				9BE5F5201FFE05B800AAE57C /* AppDelegate.m */,
+				9BE5F5221FFE05B800AAE57C /* ViewController.h */,
+				9BE5F5231FFE05B800AAE57C /* ViewController.m */,
+				9BE5F5591FFE07F200AAE57C /* VideoPlayerViewController.h */,
+				9BE5F55A1FFE07F200AAE57C /* VideoPlayerViewController.m */,
+				9BE5F5651FFE1FD600AAE57C /* PlayerView.xib */,
+				9BE5F5671FFE202900AAE57C /* PlayerView.h */,
+				9BE5F5681FFE202900AAE57C /* PlayerView.m */,
+				9BE5F55C1FFE081F00AAE57C /* TAAVPlayer.h */,
+				9BE5F55D1FFE081F00AAE57C /* TAAVPlayer.m */,
+				9BE5F5621FFE124C00AAE57C /* TAPlayerView.h */,
+				9BE5F5631FFE124C00AAE57C /* TAPlayerView.m */,
+				9BE5F55F1FFE102100AAE57C /* TAPlayerTransport.h */,
+				9BE5F5251FFE05B800AAE57C /* Main.storyboard */,
+				9BE5F5281FFE05B800AAE57C /* Assets.xcassets */,
+				9BE5F52A1FFE05B800AAE57C /* LaunchScreen.storyboard */,
+				9BE5F52D1FFE05B800AAE57C /* Info.plist */,
+				9BE5F51C1FFE05B800AAE57C /* Supporting Files */,
+			);
+			path = TAVideoPlayerDemo;
+			sourceTree = "<group>";
+		};
+		9BE5F51C1FFE05B800AAE57C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BE5F51D1FFE05B800AAE57C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E62630FD53FD3CA2E5D69324 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C7E44F9F0D9A7DF011F0A51 /* libPods-TAVideoPlayerDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9BE5F5181FFE05B800AAE57C /* TAVideoPlayerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BE5F5301FFE05B800AAE57C /* Build configuration list for PBXNativeTarget "TAVideoPlayerDemo" */;
+			buildPhases = (
+				49DC7E04708C78DC178748DB /* [CP] Check Pods Manifest.lock */,
+				9BE5F5151FFE05B800AAE57C /* Sources */,
+				9BE5F5161FFE05B800AAE57C /* Frameworks */,
+				9BE5F5171FFE05B800AAE57C /* Resources */,
+				12BEB1E5D2AE89385786124B /* [CP] Embed Pods Frameworks */,
+				5C3A1B524A411DFDD9DB75D7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TAVideoPlayerDemo;
+			productName = TAVideoPlayerDemo;
+			productReference = 9BE5F5191FFE05B800AAE57C /* TAVideoPlayerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9BE5F5111FFE05B800AAE57C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TA;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = MoemoeTechnology;
+				TargetAttributes = {
+					9BE5F5181FFE05B800AAE57C = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = R274JYMH7M;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 9BE5F5141FFE05B800AAE57C /* Build configuration list for PBXProject "TAVideoPlayerDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9BE5F5101FFE05B800AAE57C;
+			productRefGroup = 9BE5F51A1FFE05B800AAE57C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9BE5F5181FFE05B800AAE57C /* TAVideoPlayerDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9BE5F5171FFE05B800AAE57C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BE5F52C1FFE05B800AAE57C /* LaunchScreen.storyboard in Resources */,
+				9BE5F5291FFE05B800AAE57C /* Assets.xcassets in Resources */,
+				9BE5F5271FFE05B800AAE57C /* Main.storyboard in Resources */,
+				9BE5F5661FFE1FD600AAE57C /* PlayerView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12BEB1E5D2AE89385786124B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TAVideoPlayerDemo/Pods-TAVideoPlayerDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49DC7E04708C78DC178748DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TAVideoPlayerDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C3A1B524A411DFDD9DB75D7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TAVideoPlayerDemo/Pods-TAVideoPlayerDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9BE5F5151FFE05B800AAE57C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BE5F5241FFE05B800AAE57C /* ViewController.m in Sources */,
+				9BE5F5691FFE202900AAE57C /* PlayerView.m in Sources */,
+				9BE5F55B1FFE07F200AAE57C /* VideoPlayerViewController.m in Sources */,
+				9BE5F5211FFE05B800AAE57C /* AppDelegate.m in Sources */,
+				9BE5F55E1FFE081F00AAE57C /* TAAVPlayer.m in Sources */,
+				9BE5F5641FFE124C00AAE57C /* TAPlayerView.m in Sources */,
+				9BE5F51E1FFE05B800AAE57C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9BE5F5251FFE05B800AAE57C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BE5F5261FFE05B800AAE57C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9BE5F52A1FFE05B800AAE57C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BE5F52B1FFE05B800AAE57C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9BE5F52E1FFE05B800AAE57C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9BE5F52F1FFE05B800AAE57C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9BE5F5311FFE05B800AAE57C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BC91E83570A868147302E80 /* Pods-TAVideoPlayerDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R274JYMH7M;
+				INFOPLIST_FILE = TAVideoPlayerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.moemoe.TAVideoPlayerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9BE5F5321FFE05B800AAE57C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD1C542512D7FB9505B1E070 /* Pods-TAVideoPlayerDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R274JYMH7M;
+				INFOPLIST_FILE = TAVideoPlayerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.moemoe.TAVideoPlayerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9BE5F5141FFE05B800AAE57C /* Build configuration list for PBXProject "TAVideoPlayerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BE5F52E1FFE05B800AAE57C /* Debug */,
+				9BE5F52F1FFE05B800AAE57C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BE5F5301FFE05B800AAE57C /* Build configuration list for PBXNativeTarget "TAVideoPlayerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BE5F5311FFE05B800AAE57C /* Debug */,
+				9BE5F5321FFE05B800AAE57C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9BE5F5111FFE05B800AAE57C /* Project object */;
+}
