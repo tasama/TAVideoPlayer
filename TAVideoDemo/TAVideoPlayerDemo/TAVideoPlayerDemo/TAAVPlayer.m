@@ -56,6 +56,8 @@
     return self;
 }
 
+#pragma mark - UI
+    
 - (void)layoutSubviews {
     
     [super layoutSubviews];
