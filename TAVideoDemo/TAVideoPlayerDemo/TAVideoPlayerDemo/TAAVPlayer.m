@@ -9,10 +9,19 @@
 #import "TAAVPlayer.h"
 #import <AVFoundation/AVFoundation.h>
 #import "TAPlayerView.h"
+#import "FBKVOController.h"
 
 #define REFRESH_INTERVAL 0.5
 
-@interface TAAVPlayer () <TAPlayerTransportDelegate>
+@interface TAAVPlayer () <TAPlayerTransportDelegate> {
+    
+    FBKVOController *_kvoCtrl;
+    BOOL _isFullScreen;
+    CGRect _originalBounds;
+    CGPoint _originalCenter;
+    CGRect _fullScreenBounds;
+    CGPoint _fullScreenCenter;
+}
 
 @property (nonatomic, strong) UIView <TAPlayerTransport>* transport;
 
@@ -30,6 +39,7 @@
 
 @property (nonatomic, assign) float lastPlayRate;
 
+@property (nonatomic, weak) UIView *parentView;
 
 @end
 
@@ -42,15 +52,17 @@
     if (self = [super init]) {
         
         _transport = transportView;
+        _kvoCtrl = [FBKVOController controllerWithObserver:self];
+        _fullScreenBounds = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width);
+        _fullScreenCenter = CGPointMake([UIScreen mainScreen].bounds.size.width / 2.0f, [UIScreen mainScreen].bounds.size.height / 2.0f);
     }
     return self;
 }
 
 - (instancetype)initWithUrl:(NSURL *)url andTransportView:(UIView<TAPlayerTransport> *)transportView {
     
-    if (self = [super init]) {
+    if (self = [self initWithTransportView:transportView]) {
         
-        _transport = transportView;
         self.url = url;
     }
     return self;
@@ -65,29 +77,24 @@
 }
 
 #pragma mark - Observe
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+- (void)playerPlayStatus:(NSDictionary<NSKeyValueChangeKey,id> *)change {
     
-    if (context == &PlayerItemStatusContext) {
+    dispatch_async(dispatch_get_main_queue(), ^{
         
-        dispatch_async(dispatch_get_main_queue(), ^{
+        if (_item.status == AVPlayerItemStatusReadyToPlay) {
             
-            [_item removeObserver:self forKeyPath:TAAVPlayerStatus];
-            if (_item.status == AVPlayerItemStatusReadyToPlay) {
-                
-                [self addPlayerItemTimeObserver];
-                [self addItemEndObserverForPlayerItem];
-                
-                CMTime duration = _item.duration;
-                [self.transport setCurrentTime:CMTimeGetSeconds(kCMTimeZero) duration:CMTimeGetSeconds(duration)];
-                [self.player play];
-                
-            } else {
-                
-                NSLog(@"Error, Failed to load video");
-            }
-        });
-    }
+            [self addPlayerItemTimeObserver];
+            [self addItemEndObserverForPlayerItem];
+            
+            CMTime duration = _item.duration;
+            [self.transport setCurrentTime:CMTimeGetSeconds(kCMTimeZero) duration:CMTimeGetSeconds(duration)];
+            [self.player play];
+            
+        } else {
+            
+            NSLog(@"Error, Failed to load video");
+        }
+    });
 }
 
 #pragma mark - Private
@@ -100,7 +107,7 @@
         self.timeObserver = nil;
     }
     _item = [[AVPlayerItem alloc] initWithAsset:_asset];
-    [_item addObserver:self forKeyPath:TAAVPlayerStatus options:0 context:&PlayerItemStatusContext];
+    [_kvoCtrl observe:_item keyPath:TAAVPlayerStatus options:0 action:@selector(playerPlayStatus:)];
     _player = [[AVPlayer alloc] initWithPlayerItem:_item];
     _playerView = [[TAPlayerView alloc] initWithPlayer:_player andTransport:_transport];
     [self addSubview:_playerView];
@@ -183,6 +190,37 @@
         [self.player play];
     }
 }
+
+- (void)turnScreen {
+    
+    if (!_isFullScreen) {
+        
+        _isFullScreen = YES;
+        UIWindow *window = [UIApplication sharedApplication].delegate.window;
+        _originalBounds = self.bounds;
+        _originalCenter = self.center;
+        _parentView = self.superview;
+        [self removeFromSuperview];
+        [window addSubview:self];
+        [UIView animateWithDuration:.3f animations:^{
+           
+            self.transform = CGAffineTransformMakeRotation(M_PI_2);
+            self.bounds = _fullScreenBounds;
+            self.center = _fullScreenCenter;
+        }];
+    } else {
+        
+        _isFullScreen = NO;
+        [_parentView addSubview:self];
+        [UIView animateWithDuration:.3f animations:^{
+            
+            self.transform = CGAffineTransformIdentity;
+            self.bounds = _originalBounds;
+            self.center = _originalCenter;
+        }];
+    }
+}
+
 #pragma mark - Getter & Setter
 
 - (void)setUrl:(NSURL *)url {

@@ -25,23 +25,9 @@
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
-- (void)viewWillLayoutSubviews {
-    
-    [super viewWillLayoutSubviews];
-    
-    self.player.frame = CGRectMake(0, 0, 375, 200);
-}
-
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    self.player.url = [NSURL URLWithString:@"http://pl-ali.youku.com/playlist/m3u8?vid=XMzI4NzgxMTcxNg%3D%3D&type=flv&ups_client_netip=74cc6421&ups_ts=1515055926&utid=l4upETzYNnwCAXTMZCGG%2FIb7&ccode=050F&psid=c80ee68edef42e83cc90c24cc0e321c2&duration=189&expire=18000&ups_key=cbcb818ccda1c6b67426bffa4e2865ab"];
-    
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    
-    [super viewWillAppear:animated];
-    
+    [self.player performSelector:@selector(turnScreen)];
 }
 
 - (TAAVPlayer *)player {
@@ -49,7 +35,10 @@
     if (!_player) {
         
         UIView *view = [[NSBundle mainBundle] loadNibNamed:@"PlayerView" owner:nil options:nil].lastObject;
-        _player = [[TAAVPlayer alloc] initWithTransportView:view];
+        _player = [[TAAVPlayer alloc] initWithUrl:[NSURL URLWithString:@"https://media.w3.org/2010/05/sintel/trailer.mp4"] andTransportView:(UIView <TAPlayerTransport> *)view];
+        
+        _player.bounds = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 300.0f);
+        _player.center = CGPointMake([UIScreen mainScreen].bounds.size.width / 2.0f, (150.0f + 64.0f));
     }
     return _player;
 }

@@ -43,6 +43,12 @@
     [self.slider setValue:value];
 }
 
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    [self.delegate turnScreen];
+}
+
 - (void)setDelegate:(id<TAPlayerTransportDelegate>)delegate {
     
     _delegate = delegate;

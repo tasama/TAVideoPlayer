@@ -19,6 +19,8 @@
 		9BE5F5661FFE1FD600AAE57C /* PlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BE5F5651FFE1FD600AAE57C /* PlayerView.xib */; };
 		9BE5F5691FFE202900AAE57C /* PlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE5F5681FFE202900AAE57C /* PlayerView.m */; };
 		E519AA6AB6C06E9277AAFC63 /* libPods-TAVideoPlayerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C7E44F9F0D9A7DF011F0A51 /* libPods-TAVideoPlayerDemo.a */; };
+		E69A8422208DF8BA00257C41 /* NSObject+FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = E69A841F208DF8BA00257C41 /* NSObject+FBKVOController.m */; };
+		E69A8423208DF8BA00257C41 /* FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = E69A8420208DF8BA00257C41 /* FBKVOController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,11 @@
 		9BE5F5671FFE202900AAE57C /* PlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerView.h; sourceTree = "<group>"; };
 		9BE5F5681FFE202900AAE57C /* PlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerView.m; sourceTree = "<group>"; };
 		AD1C542512D7FB9505B1E070 /* Pods-TAVideoPlayerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TAVideoPlayerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TAVideoPlayerDemo/Pods-TAVideoPlayerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		E69A841D208DF8BA00257C41 /* KVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOController.h; sourceTree = "<group>"; };
+		E69A841E208DF8BA00257C41 /* FBKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBKVOController.h; sourceTree = "<group>"; };
+		E69A841F208DF8BA00257C41 /* NSObject+FBKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FBKVOController.m"; sourceTree = "<group>"; };
+		E69A8420208DF8BA00257C41 /* FBKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBKVOController.m; sourceTree = "<group>"; };
+		E69A8421208DF8BA00257C41 /* NSObject+FBKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FBKVOController.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +96,7 @@
 		9BE5F51B1FFE05B800AAE57C /* TAVideoPlayerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E69A841C208DF8BA00257C41 /* FBKVOController */,
 				9BE5F51F1FFE05B800AAE57C /* AppDelegate.h */,
 				9BE5F5201FFE05B800AAE57C /* AppDelegate.m */,
 				9BE5F5221FFE05B800AAE57C /* ViewController.h */,
@@ -126,6 +134,18 @@
 				6C7E44F9F0D9A7DF011F0A51 /* libPods-TAVideoPlayerDemo.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E69A841C208DF8BA00257C41 /* FBKVOController */ = {
+			isa = PBXGroup;
+			children = (
+				E69A841D208DF8BA00257C41 /* KVOController.h */,
+				E69A841E208DF8BA00257C41 /* FBKVOController.h */,
+				E69A8420208DF8BA00257C41 /* FBKVOController.m */,
+				E69A8421208DF8BA00257C41 /* NSObject+FBKVOController.h */,
+				E69A841F208DF8BA00257C41 /* NSObject+FBKVOController.m */,
+			);
+			path = FBKVOController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +248,8 @@
 				9BE5F5691FFE202900AAE57C /* PlayerView.m in Sources */,
 				9BE5F55B1FFE07F200AAE57C /* VideoPlayerViewController.m in Sources */,
 				9BE5F5211FFE05B800AAE57C /* AppDelegate.m in Sources */,
+				E69A8423208DF8BA00257C41 /* FBKVOController.m in Sources */,
+				E69A8422208DF8BA00257C41 /* NSObject+FBKVOController.m in Sources */,
 				9BE5F55E1FFE081F00AAE57C /* TAAVPlayer.m in Sources */,
 				9BE5F5641FFE124C00AAE57C /* TAPlayerView.m in Sources */,
 				9BE5F51E1FFE05B800AAE57C /* main.m in Sources */,

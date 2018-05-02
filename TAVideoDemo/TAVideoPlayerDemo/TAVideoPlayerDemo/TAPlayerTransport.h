@@ -24,6 +24,8 @@
 
 - (void)jumpedToTime:(NSTimeInterval)time;
 
+- (void)turnScreen;
+
 @end
 
 @protocol TAPlayerTransport <NSObject>
